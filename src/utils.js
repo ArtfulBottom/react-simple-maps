@@ -21,11 +21,19 @@ export function fetchGeographies(url) {
 
 export function getFeatures(geographies, parseGeographies) {
   if (Array.isArray(geographies)) return parseGeographies ? parseGeographies(geographies) : geographies
+  // const feats = feature(
+  //   geographies,
+  //   geographies.objects[Object.keys(geographies.objects)[0]]
+  // ).features
+  // console.log(feats);
   const feats = feature(
     geographies,
     geographies.objects[Object.keys(geographies.objects)[0]]
   ).features
-  console.log(feats);
+  console.log(geographies.objects);
+  console.log(geographies);
+  console.log(geographies.objects[Object.keys(geographies.objects)[0]])
+
   return parseGeographies ? parseGeographies(feats) : feats
 }
 
