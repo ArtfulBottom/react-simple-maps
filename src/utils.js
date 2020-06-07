@@ -31,7 +31,7 @@ export function getFeatures(geographies, parseGeographies) {
     geographies.objects[Object.keys(geographies.objects)[0]]
   ).features
   console.log(geographies.objects);
-  console.log(geographies);
+  console.log(feats);
   console.log(geographies.objects[Object.keys(geographies.objects)[0]])
 
   return parseGeographies ? parseGeographies(feats) : feats
