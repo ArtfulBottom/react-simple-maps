@@ -34,15 +34,13 @@ export function getFeatures(geographies, parseGeographies) {
     geographies,
     geographies.objects[Object.keys(geographies.objects)[1]]
   ).features
-  const feats = feats_states.concat(feats_counties)
-  // console.log(geographies.objects);
-  console.log(feats);
-  // console.log(geographies.objects[Object.keys(geographies.objects)[0]])
+  const feats = feats_counties.concat(feats_states)
 
   return parseGeographies ? parseGeographies(feats) : feats
 }
 
 export function prepareFeatures(geographies, path) {
+  console.log(geographies);
   return geographies ? geographies.map((d, i) => {
     return {
       ...d,
