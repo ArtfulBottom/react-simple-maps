@@ -26,13 +26,18 @@ export function getFeatures(geographies, parseGeographies) {
   //   geographies.objects[Object.keys(geographies.objects)[0]]
   // ).features
   // console.log(feats);
-  const feats = feature(
+  const feats_counties = feature(
     geographies,
     geographies.objects[Object.keys(geographies.objects)[0]]
   ).features
-  console.log(geographies.objects);
+  const feats_states = feature(
+    geographies,
+    geographies.objects[Object.keys(geographies.objects)[1]]
+  ).features
+  const feats = feats_counties.concat(feats_states)
+  // console.log(geographies.objects);
   console.log(feats);
-  console.log(geographies.objects[Object.keys(geographies.objects)[0]])
+  // console.log(geographies.objects[Object.keys(geographies.objects)[0]])
 
   return parseGeographies ? parseGeographies(feats) : feats
 }
