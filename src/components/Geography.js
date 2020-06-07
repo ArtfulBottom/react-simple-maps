@@ -1,7 +1,7 @@
 
 import React, { useState, memo } from "react"
 import PropTypes from "prop-types"
-
+console.log('hello!');
 const Geography = ({
   geography,
   onMouseEnter,
