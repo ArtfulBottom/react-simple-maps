@@ -34,7 +34,7 @@ export function getFeatures(geographies, parseGeographies) {
     geographies,
     geographies.objects[Object.keys(geographies.objects)[1]]
   ).features
-  const feats = feats_counties.concat(feats_states)
+  const feats = feats_states.concat(feats_counties)
   // console.log(geographies.objects);
   console.log(feats);
   // console.log(geographies.objects[Object.keys(geographies.objects)[0]])
