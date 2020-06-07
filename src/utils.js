@@ -40,7 +40,6 @@ export function getFeatures(geographies, parseGeographies) {
 }
 
 export function prepareFeatures(geographies, path) {
-  console.log(geographies);
   return geographies ? geographies.map((d, i) => {
     return {
       ...d,
